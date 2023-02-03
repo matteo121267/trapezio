@@ -1,8 +1,10 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /**
  * 
  * 
  * 
- * @author olimpio
+ * @author olimpio2
  *
  */
 public class Trapezio {
@@ -30,9 +32,17 @@ public String toString() {
 	return "Trapezio [baseM=" + baseM + ", baseMi=" + baseMi + ", altezza=" + altezza + "]";
 }
 public static void main(String[] args) {
-	Trapezio t1= new Trapezio(5.7,3.7,7.9);
+	Trapezio t1= new Trapezio(3,2,1);
 	double area = t1.getarea();
+	double risAtteso = 2.5;
+	double Risottenuto = t1.getarea();
+	assertEquals(risAtteso,Risottenuto,0.1);
 	System.out.println("area del trapezio è: "+area);
+	Trapezio t2 = new Trapezio(6,5,5);
+	double risAtteso1 = 27.5;
+	double Risottenuto1 = t2.getarea();
+	assertEquals(risAtteso1,Risottenuto1,0.1);
+	System.out.println("area del trapezio è: "+t2.getarea());
 }
 
 
